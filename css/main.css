@@ -8,29 +8,45 @@ input::-webkit-inner-spin-button {
 
 
 .custom-input input:focus{
-	outline: none;
 	border: none;
+	outline: none;
 }
 
 input:focus{
-	outline: none;
+
 	border: none;
 	border-bottom: 1px solid #00ff00;
+	outline: none;
 }
 
 
+.navbar-custom{
+	border: none;
+	background: none;
+}
+
+.navbar-nav{
+	font-size: 1.3rem;
+}
+
+.btn-danger{
+
+	background: red;
+	border: none;
+	font-size: 1.3rem;
+}
+
 @font-face {
-font-family: "OpenSans";
-src: url("../fonts/OpenSans-Regular.ttf"); 
+	font-family: "OpenSans";
+	src: url("../fonts/OpenSans-Regular.ttf");
 }
 
 
 .container{
-	font-family: "OpenSans";
-	font-size: 12pt;
 	color: #888;
 	background: #f7f7f7;
-	
+	font-family: "OpenSans";
+	font-size: 12pt;
 }
 
 
@@ -44,48 +60,45 @@ src: url("../fonts/OpenSans-Regular.ttf");
 
 
 .card-content{
-
-	padding-left: 20px;
-	padding-right: 20px;
-	height: 210px;
-	width: 360px;
 	border-radius: 15px;
 	background: #fff;
 	box-shadow: 0px 3px 20px 0px rgba(115, 115, 115, 0.5);
-
+	height: 210px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 360px;
 }
 
 
 .card input{
-	width: 100%;
 	border: none;
 	border-bottom: 1px solid #000;
 	font-size: 16pt;
 	font-weight: bold;
+	width: 100%;
 }
 
 
 .inputCurrency{
-	display: table;
 	border: 2px solid #ccc;
 	background: #fff;
-	padding: 2px;
+	display: table;
 	margin-bottom: 15px;
+	padding: 2px;
 }
 
 .custom-input{
-	
-	padding: 3px;
-	width: 100%;
-	display: table-cell;
 	border: none;
+	display: table-cell;
 	font-size: 14pt;
 	font-weight: bold;
+	padding: 3px;
+	width: 100%;
 }
 
 .input-sender-card{
-	color: #999;
 	border: none;
+	color: #999;
 	font-size: 11pt;
 	position: relative;
 }
@@ -103,11 +116,10 @@ src: url("../fonts/OpenSans-Regular.ttf");
 
 #inputEmail:focus{
 	border: 1px solid #00ff00;
-
 }
 
 .form-control{
-border:none ;
+	border:none ;
 }
 
 .form-control:focus {
@@ -122,11 +134,10 @@ border:none ;
 
 
 .brand-card{
-
+	height: 45px;
 	margin-left: 260px;
 	margin-bottom: 10px;
-	height: 45px;
-	
+
 }
 
 #currency{
