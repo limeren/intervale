@@ -27,6 +27,19 @@ input:focus{
 
 .navbar-nav{
 	font-size: 1.3rem;
+	
+}
+
+
+.glyphicon-log-in{
+	color: green;
+	font-size: 2rem;
+}
+
+.navbar-btn{
+
+	background: none;
+	border: none;
 }
 
 .btn-danger{
