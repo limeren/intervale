@@ -15,148 +15,91 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 
 
-
-    <script>
-        $(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
-
-
 </head>
 
 
 
 <body>
-
 	<div class="container">
 
 		<!--Меню-->
-
         <div class="row">
-
                 <nav class="navbar navbar-default navbar-custom" role="navigation">
-
                     <div class="container-fluid col-lg-offset-2">
-
                         <!--заголовок меню-->
                         <div class="navbar-header">
-
                             <button type="button" class="btn navbar-btn btn-danger">Главная</button>
-
                             <button type="button"
                                     class="navbar-toggle collapsed navbar-btn"
                                     data-toggle="collapse"
                                     data-target="#navbar-main">
-
                                 <span class='glyphicon glyphicon-option-horizontal'></span>
-
                             </button>
-
                         </div>
 
-
                         <!--Содержимое меню-->
-
                         <div class="collapse navbar-collapse" id="navbar-main">
-
                             <ul class="nav navbar-nav">
-
                                 <li><a href="#">История переводов</a></li>
                                 <li><a href="#">Мои карты</a></li>
                                 <li><a href="#">Настройки</a></li>
                                 <li><a href="#">Лимиты и комисии</a></li>
                                 <li><a href="#">Помощь</a></li>
-
                             </ul>
-
                             <button type="button"
                                     class="btn btn-default navbar-btn login-btn">
                                 <i class='glyphicon glyphicon-log-in'></i>
                             </button>
-
                         </div>
-
                     </div>
                 </nav>
-
         </div>
 
-
-
         <!--Карты-->
-
 		<div class="row">
-
 			<div class="col-xs-12 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
-
 				<div class="text-box">Данные отправителя</div>
-
 				<div class="card">
-
 					<div class="card-content center-block">
-
 					<div class="brand-card">
-
 						<div id="visa-sender">
 							<img src="res/visa.svg" height="110%" width="110%">
 						</div>
-
 						<div id="maestro-sender">
 							<img src="res/maestro.svg" height="110%" width="110%">
 						</div>
-
 						<div id="mastercard-sender">
 							<img src="res/mastercard.svg" height="110%" width="110%">
 						</div>
-
 					</div>
-
 					<div class="input-sender-card">Номер карты<br>
 							<input  onKeyUp="brandingCard();" type="text" id="inputSenderCard">
 					</div>
-
-						
 					<div id="MMYY-block">
-						
 						<div style="display: table-cell; width: 120px;">
-							
 							<div style="font-size: 10pt">
 								Срок действия
 							</div>
-								
 							<div style="display: table;">
-
 								<div style="display: table-cell;">
-
 									<input style="width: 50px;text-align:center"
 												 type="text"
 												 id="MM-input"
 												 maxlength="2"
 												 placeholder="ММ">
-
 								</div>
-
 								<div style="display: table-cell;">/</div>
-
 								<div style="display: table-cell;">
-
 									<input type="text"
 												 id="YY-input"
 												 style="width: 50px; text-align:center"
 												 maxlength="2"
 												 placeholder="ГГ">
-
 								</div>
-
-							</div>	
-
+							</div>
 						</div>
-
 						<div style="width: 100px;"></div>
-								
 						<div style="width: 70px; display: table-cell;">
-
 							<div style="font-size: 10pt; display: table;">
 								<div id="CVV" style="display: table-cell;">CVV</div>
 								<div id="slash" style="display: table-cell;">/</div>
@@ -168,77 +111,50 @@
 											проверки подлинности Вашей карты.Его можно
 											найти на обратной стороне карты – это 3 цифры
 											рядом с местом для подписи" >
-
 								</span>
-
 							</div>
-
-
 							<input type="text"
 										 maxlength="3"
 										 id="CVV-input"
 										 style="width: 40px; text-align:center">
 
 						</div>
-
 						</div>
-
 						</div>
-
 					</div>
-					
 				</div>
 
-			
-				
 				<div class="col-xs-12 col-md-5 col-lg-4">
-								
 							<div class="text-box">Данные получателя</div>
-
 							<div class="card">
-
 								<div class="card-content center-block">
-
 									<div class="brand-card">
-
 									<div id="visa-recipient"><img src="res/visa.svg" height="110%" width="110%"></div>
 									<div id="maestro-recipient"><img src="res/maestro.svg" height="110%" width="110%"></div>
 									<div id="mastercard-recipient"><img src="res/mastercard.svg" height="110%" width="110%"></div>
-
 								</div>
-
 								<div class="input-sender-card">Номер карты<br>
-
 										<input onKeyUp="brandingCard();" id="inputRecipientCard">
-
 								</div>
-
 							</div>
-
 				</div>
 			</div>
 		</div>
 
 
-
-
 		<div class="row">
-
 			<div class="col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
-
 					<div class="checkbox">
 						    <label>
 			     				<input type="checkbox"> Отправить чек на e-mail
 			    			</label>
 					</div>
 
-           <div class="form-group">
-						 <input type="email" class="form-control" id="inputEmail" placeholder="Ваш e-mail">
+            <div class="form-group">
+                <input type="email" class="form-control" id="inputEmail" placeholder="Ваш e-mail">
+            </div>
 
-					 </div>
-
-
-		    			<label for="inputSumm">Сумма перевода</label>
+                <label for="inputSumm">Сумма перевода</label>
 
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="От 500 до 500000">
@@ -252,75 +168,40 @@
               <input type="text" class="form-control" placeholder="От 680 до 530150">
               <span class="input-group-addon">BYN</span>
             </div>
-					
 
 					<div class="checkbox hidden-lg hidden-md">
-
 						<label>
 			     				<input type="checkbox"> Добавить сообщение получателю 
 			    		</label>
-
 						<span class="glyphicon glyphicon-question-sign"
                               data-toggle="tooltip"
                               data-placement="top"
                               title="Добавить сообщение получателю о переводе средств на его счет">
-
                         </span>
-
-					</div>	
-
+					</div>
 					<button type="button" id="btn" class="btn btn-primary btn-block btn-success">Перевести</button>
-
 			</div>
 		
 			<div class="col-md-5">
-
 					<div class="checkbox hidden-xs hidden-sm">
-
 						<label>
 			     			<input type="checkbox"> Добавить сообщение получателю 
 						</label>
-
 						<span class="glyphicon glyphicon-question-sign"
 									data-toggle="tooltip"
 									data-placement="top"
 									title="Добавить сообщение получателю о
 									переводе средств на его счет">
-
 						</span>
-
-					</div>			
-
+					</div>
 			</div>
-
 		</div>
-
 	</div>
 
 
-
-
-<script>
-$(function(){
-
-  $.mask.definitions['m'] = "[0-1]";
-   $.mask.definitions['e'] = "[0-9a-zA-Z.@]";
-  $("#inputSenderCard").mask("9999  9999  9999  9999");
-  $("#inputRecipientCard").mask("9999  9999  9999  9999");
-  $("#MM-input").mask("m9");
-  $("#YY-input").mask("99");
-  $("#CVV-input").mask("999");
-  $("#totalSumm").mask("999?999");
-  $("#inputTransactionSumm").mask("999?999");
-  $("#inputEmail").mask("eeee?eeeeeeeeeeeeeeee");
-  
-  
-});
-</script>
-
-
-	<script src="js/config.js"></script>
+    <script src="js/config.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+    <script src="js/mask.js"></script>
 
 
 
