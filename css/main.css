@@ -20,6 +20,11 @@ a:visited{
 }
 
 
+.dropdown-menu{
+	right: 80%;
+	left: auto;
+}
+
 .custom-input input:focus{
 	border: none;
 	outline: none;
