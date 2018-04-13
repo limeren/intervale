@@ -61,6 +61,8 @@ input:focus{
 
 
 
+
+
 .navbar-btn{
 
 	background: none;
@@ -178,15 +180,19 @@ input:focus{
 
 }
 
+.table-cell{
+	display: table-cell;
+}
 
+.table{
+	display: table;
+}
 
 
 #currency{
 
 	display: table-cell;
 }
-
-
 
 #visa-sender, #maestro-sender, 
 #mastercard-sender,#visa-recipient,
@@ -227,4 +233,5 @@ input:focus{
 
 	display: table;
 	margin-top: 10px;
+	font-size: 1.5rem;
 }
