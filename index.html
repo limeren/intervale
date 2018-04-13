@@ -16,11 +16,11 @@
 
 
 
-	<script>
-    $(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-  </script>
+    <script>
+        $(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 
 
 </head>
@@ -37,31 +37,30 @@
 
                 <nav class="navbar navbar-default navbar-custom" role="navigation">
 
-                    <div class="container">
+                    <div class="container-fluid col-lg-offset-2">
 
-											<!--заголовок меню-->
+                        <!--заголовок меню-->
                         <div class="navbar-header">
 
-														<button type="button" class="btn btn-danger navbar-btn">Главная</button>
+                            <button type="button" class="btn navbar-btn btn-danger">Главная</button>
 
                             <button type="button"
-                                    class="navbar-toggle collapsed"
+                                    class="navbar-toggle collapsed navbar-btn"
                                     data-toggle="collapse"
                                     data-target="#navbar-main">
 
-															<span class='glyphicon glyphicon-option-horizontal'></span>
+                                <span class='glyphicon glyphicon-option-horizontal'></span>
 
                             </button>
 
                         </div>
 
 
+                        <!--Содержимое меню-->
+
                         <div class="collapse navbar-collapse" id="navbar-main">
 
-														<button type="button" class="btn btn-default navbar-btn"><i class='glyphicon glyphicon-log-in'></i></button>
-
                             <ul class="nav navbar-nav">
-
 
                                 <li><a href="#">История переводов</a></li>
                                 <li><a href="#">Мои карты</a></li>
@@ -69,23 +68,28 @@
                                 <li><a href="#">Лимиты и комисии</a></li>
                                 <li><a href="#">Помощь</a></li>
 
-
                             </ul>
+
+                            <button type="button"
+                                    class="btn btn-default navbar-btn login-btn">
+                                <i class='glyphicon glyphicon-log-in'></i>
+                            </button>
 
                         </div>
 
                     </div>
                 </nav>
+
         </div>
 
 
 
+        <!--Карты-->
 
-		
 		<div class="row">
 
 			<div class="col-xs-12 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
-				
+
 				<div class="text-box">Данные отправителя</div>
 
 				<div class="card">
@@ -256,7 +260,13 @@
 			     				<input type="checkbox"> Добавить сообщение получателю 
 			    		</label>
 
-						<span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="Добавить сообщение получателю о переводе средств на его счет"></span>		
+						<span class="glyphicon glyphicon-question-sign"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Добавить сообщение получателю о переводе средств на его счет">
+
+                        </span>
+
 					</div>	
 
 					<button type="button" id="btn" class="btn btn-primary btn-block btn-success">Перевести</button>

@@ -7,6 +7,19 @@ input::-webkit-inner-spin-button {
 }
 
 
+a{
+	color: green;
+}
+
+a:hover{
+	color:lime;
+}
+
+a:visited{
+	color:red;
+}
+
+
 .custom-input input:focus{
 	border: none;
 	outline: none;
@@ -27,14 +40,26 @@ input:focus{
 
 .navbar-nav{
 	font-size: 1.3rem;
-	
 }
 
+.login-btn:hover{
+	background: none;
+}
 
-.glyphicon-log-in{
+.glyphicon-log-in, .glyphicon-option-horizontal{
 	color: green;
 	font-size: 2rem;
 }
+
+.glyphicon-option-horizontal:hover{
+	color: limegreen;
+}
+
+.glyphicon-log-in:hover{
+	color: limegreen;
+}
+
+
 
 .navbar-btn{
 
@@ -153,10 +178,14 @@ input:focus{
 
 }
 
+
+
+
 #currency{
 
 	display: table-cell;
 }
+
 
 
 #visa-sender, #maestro-sender, 
