@@ -24,23 +24,30 @@
                         <!--заголовок меню-->
                         <div class="navbar-header">
                             <button type="button" class="btn navbar-btn btn-danger">Главная</button>
-                            <button type="button"
-                                    class="navbar-toggle collapsed navbar-btn"
-                                    data-toggle="collapse"
-                                    data-target="#navbar-main">
-                                <span class='glyphicon glyphicon-option-horizontal'></span>
-                            </button>
                         </div>
 
                         <!--Содержимое меню-->
                         <div class="collapse navbar-collapse" id="navbar-main">
-                            <ul class="nav navbar-nav">
+
+							<ul class="nav navbar-nav ">
+								<li><a href="#">История переводов</a></li>
+								<li><a href="#">Мои карты</a></li>
+
+							</ul>
+
+                            <ul class="dropdown-menu ">
                                 <li><a href="#">История переводов</a></li>
                                 <li><a href="#">Мои карты</a></li>
                                 <li><a href="#">Настройки</a></li>
                                 <li><a href="#">Лимиты и комисии</a></li>
                                 <li><a href="#">Помощь</a></li>
                             </ul>
+							<button type="button"
+									class="dropdown-toggle navbar-btn"
+									data-toggle="dropdown"
+									data-target="#navbar-main">
+								<span class='glyphicon glyphicon-option-horizontal'></span>
+							</button>
                             <button type="button"
                                     class="btn btn-default navbar-btn login-btn">
                                 <i class='glyphicon glyphicon-log-in'></i>

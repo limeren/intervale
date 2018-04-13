@@ -49,18 +49,22 @@ input:focus{
 .glyphicon-log-in, .glyphicon-option-horizontal{
 	color: green;
 	font-size: 2rem;
+
+}
+
+.glyphicon-option-horizontal{
+
+	transform: translateY(5px);
 }
 
 .glyphicon-option-horizontal:hover{
 	color: limegreen;
+
 }
 
 .glyphicon-log-in:hover{
 	color: limegreen;
 }
-
-
-
 
 
 .navbar-btn{
