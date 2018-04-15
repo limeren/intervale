@@ -7,6 +7,7 @@
 	<title>Task 2</title>
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
 
 	<script src="js/jquery.min.js"></script>
@@ -14,66 +15,76 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 </head>
 
-<body>
 	<div class="container">
+     <div class="row">
+			 <div class="col-xs-5
+										col-sm-5
+										col-md-7
+										col-lg-6
+										col-xs-offset-2
+										col-sm-offset-2
+										col-md-offset-1
+										col-lg-offset-2">
+											<!--Меню-->
+					<nav class="navbar navbar-default navbar-custom" role="navigation">
+							<div class="container-fluid">
+							<!--заголовок меню-->
+									<div class="navbar-header">
+									<!--Кнопка Главная и ссылки-->
+										<button type="button" class="btn navbar-btn btn-danger">Главная</button>
+									</div>
+									<div class="hidden-xs hidden-sm visible-md visible-lg">
+											<ul class="nav navbar-nav">
+													<li><a href="#">История переводов</a></li>
+													<li><a href="#">Мои карты</a></li>
+											</ul>
+									</div>
+									<div class=" hidden-xs visible-sm hidden-md hidden-lg">
+											<ul class="nav navbar-nav">
+													<li><a href="#">История переводов</a></li>
+											</ul>
+									</div>
+							</div>
+					</nav>
+			 </div>
+				<!--Содержимое меню-->
+				<div class="col-xs-4
+										col-sm-3
+										col-md-3
+										col-lg-2
+										col-xs-offset-1
+										col-sm-offset-1
+										col-md-offset-1 ">
+				<!--Кнопка меню-->
+						<div class="dropdown">
+							<button type="button"
+											class="dropdown-toggle navbar-btn"
+											data-toggle="dropdown"
+											id="dropdownMenu">
+											<span class='glyphicon glyphicon-option-horizontal'></span>
+							</button>
+							<!--Содержимое кнопки меню-->
+							<ul class="dropdown-menu" role="menu"  aria-labelledby="dropdownMenu">
+									<li class="visible-xs hidden-sm  hidden-md hidden-lg">
+											<a href="#">История переводов</a>
+									</li>
+									<li class="visible-sm visible-xs hidden-md hidden-lg">
+											<a href="#">Мои карты</a>
+									</li>
+									<li><a href="#">Настройки</a></li>
+									<li><a href="#">Лимиты и комисии</a></li>
+									<li><a href="#">Помощь</a></li>
+							</ul>
+							<!--Кнопка входа-->
+							<button type="button"
+											class="btn btn-default navbar-btn login-btn">
+								<i class='glyphicon glyphicon-log-in'></i>
+							</button>
+						</div>
+				</div>
+		 </div>
 
-		<!--Меню-->
-        <div class="row">
-					<!--Кнопка Главная и ссылки-->
-					<div class="col-xs-5
-											col-sm-5
-											col-md-7
-											col-lg-6
-											col-xs-offset-2
-											col-sm-offset-2
-											col-md-offset-1
-											col-lg-offset-2">
-
-                <nav class="navbar navbar-default navbar-custom" role="navigation">
-                    <div class="container-fluid">
-                        <!--заголовок меню-->
-											<div class="navbar-header">
-												<button type="button" class="btn navbar-btn btn-danger">Главная</button>
-											</div>
-
-
-										</div>
-								</nav>
-					</div>
-					<!--Содержимое меню-->
-					<div class="col-xs-4
-											col-sm-3
-											col-md-3
-											col-lg-2
-											col-xs-offset-1
-											col-sm-offset-1
-											col-md-offset-1 ">
-
-                        <div class="dropdown">
-
-													<button type="button"
-																	class="dropdown-toggle navbar-btn"
-																	data-toggle="dropdown"
-																	id="dropdownMenu">
-														<span class='glyphicon glyphicon-option-horizontal'></span>
-													</button>
-
-                            <ul class="dropdown-menu" role="menu"  aria-labelledby="dropdownMenu">
-															<li><a href="#">Мои карты</a></li>
-                                <li><a href="#">Настройки</a></li>
-                                <li><a href="#">Лимиты и комисии</a></li>
-                                <li><a href="#">Помощь</a></li>
-                            </ul>
-
-                            <button type="button"
-                                    class="btn btn-default navbar-btn login-btn">
-                                <i class='glyphicon glyphicon-log-in'></i>
-                            </button>
-                        </div>
-					</div>
-        </div>
-
-        <!--Карты-->
+        <!---Карты--->
 		<div class="row">
 			<div class="col-xs-12 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
 				<div class="text-box">Данные отправителя</div>
@@ -140,7 +151,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="col-xs-12 col-md-5 col-lg-4">
 							<div class="text-box">Данные получателя</div>
 							<div class="card">
@@ -158,7 +168,7 @@
 			</div>
 		</div>
 
-
+	<!--Поля ввода-->
 		<div class="row">
 			<div class="col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
 					<div class="checkbox">
@@ -181,13 +191,13 @@
             </div>
 					<div class="checkbox hidden-lg hidden-md">
 						<label>
-			     				<input type="checkbox"> Добавить сообщение получателю 
-			    		</label>
+			     		<input type="checkbox"> Добавить сообщение получателю
+			    	</label>
 						<span class="glyphicon glyphicon-question-sign"
                               data-toggle="tooltip"
                               data-placement="top"
                               title="Добавить сообщение получателю о переводе средств на его счет">
-                        </span>
+            </span>
 					</div>
 					<button type="button" id="btn" class="btn btn-primary btn-block btn-success">Перевести</button>
 			</div>
@@ -207,12 +217,9 @@
 		</div>
 	</div>
 
-
-    <script src="js/config.js"></script>
+	<script src="js/config.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-    <script src="js/mask.js"></script>
-
-
+	<script src="js/mask.js"></script>
 
 </body>
 </html>
