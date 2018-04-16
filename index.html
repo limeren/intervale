@@ -16,11 +16,24 @@
 
 	<div class="container">
      <div class="row">
-				<div class="col-xs-4 col-xs-offset-2 col-sm-2 col-sm-offset-1 col-md-2 col-lg-1 col-lg-offset-2 navbar-header">
+				<div class="col-xs-4
+										col-xs-offset-2
+										col-sm-2
+										col-sm-offset-1
+										col-md-2
+										col-lg-1
+										col-lg-offset-2
+										navbar-header">
 						<!--Кнопка Главная и ссылки-->
 					<button type="button" class="btn navbar-btn btn-danger">Главная</button>
 				</div>
-				<div class="hidden-xs hidden-sm visible-md visible-lg col-md-6 col-lg-5 col-lg-offset-1">
+				<div class="hidden-xs
+										hidden-sm
+										visible-md
+										visible-lg
+										col-md-6
+										col-lg-5
+										col-lg-offset-1">
 						<div class="row fix-position">
 							<div class="col-md-6">
 								<a href="#">История переводов</a>
@@ -63,8 +76,11 @@
 						</div>
 				</div>
 		 </div>
+
         <!---Карты--->
 		<div class="row">
+
+			<!--Карта отправителя-->
 			<div class="col-xs-12 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
 				<div class="text-box">Данные отправителя</div>
 				<div class="card">
@@ -84,49 +100,44 @@
 							<input  onKeyUp="brandingCard();" type="text" id="inputSenderCard">
 					</div>
 					<div id="MMYY-block">
-						<div class="table-cell" style="width: 120px;">
-							<div>
-								Срок действия
-							</div>
-							<div class="table">
-								<div class="table-cell">
-									<input type="text"
-												 id="MM-input"
-												 maxlength="2"
-												 placeholder="ММ">
-								</div>
-								<div class="table-cell">/</div>
-								<div class="table-cell">
-									<input type="text"
-												 id="YY-input"
-												 maxlength="2"
-												 placeholder="ГГ">
-								</div>
-							</div>
-						</div>
-						<div style="width: 100px;"></div>
-						<div class="table-cell" style="width: 70px;">
-							<div style="font-size: 10pt; display: table;">
-								<div id="CVV" style="display: table-cell;">CVV</div>
-								<div id="slash" style="display: table-cell;">/</div>
-								<div id="CVC" style="display: table-cell;">CVC </div>
+						<div class="row">
+							<div class="col-xs-6">Срок действия</div>
+							<div class="col-xs-4 col-xs-offset-2">CVV/CVC
 								<span class="glyphicon glyphicon-question-sign"
-											style="margin-left: 5px;" data-toggle="tooltip"
+											data-toggle="tooltip"
 											data-placement="top"
-											title="CVV-код – это трехзначный код для
-											проверки подлинности Вашей карты.Его можно
-											найти на обратной стороне карты – это 3 цифры
-											рядом с местом для подписи" >
+											title="CVV-код – это трехзначный
+											код для проверки подлинности Вашей
+											карты.Его можно найти на обратной
+											стороне карты – это 3 цифры рядом
+											с местом для подписи" >
 								</span>
+
 							</div>
-							<input type="text"
-										 maxlength="3"
-										 id="CVV-input">
 						</div>
-						</div>
+						<div class="row">
+							<div class="col-xs-6">
+								<input type="text"
+											 id="MM-input"
+											 maxlength="2"
+											 placeholder="ММ"> /
+								<input type="text"
+											 id="YY-input"
+											 maxlength="2"
+											 placeholder="ГГ">
+								</div>
+							<div class="col-xs-4 col-xs-offset-2">&nbsp;
+								<input type="text"
+											 maxlength="3"
+											 id="CVV-input">
+							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+
+			<!--Карта получателя-->
 				<div class="col-xs-12 col-md-5 col-lg-4">
 							<div class="text-box">Данные получателя</div>
 							<div class="card">
