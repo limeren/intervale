@@ -1,9 +1,9 @@
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 @font-face {
@@ -21,25 +21,91 @@ a:hover{
   text-decoration: none;
 }
 
-.brand-card{
-  height: 45px;
-  margin-left: 260px;
-  margin-bottom: 10px;
+.dropdown-menu{
+  right: 80%;
+  left: auto;
+}
+
+.custom-input input:focus{
+  border: none;
+  outline: none;
+}
+
+input:focus{
+
+  border: none;
+  border-bottom: 1px solid #00ff00;
+  outline: none;
+}
+
+.navbar-custom{
+  border: none;
+  background: none;
+}
+
+.fix-position{
+  transform: translateY(15px);
+}
+
+.navbar-nav{
+  font-size: 1.3rem;
+}
+
+.login-btn:hover{
+  background: none;
+}
+
+.glyphicon-log-in, .glyphicon-option-horizontal{
+  color: green;
+  font-size: 2rem;
+
+}
+
+.glyphicon-option-horizontal{
+
+  transform: translateY(5px);
+}
+
+.glyphicon-option-horizontal:hover{
+  color: limegreen;
+
+}
+
+.glyphicon-log-in:hover{
+  color: limegreen;
+}
+
+.navbar-btn{
+
+  background: none;
+  border: none;
 }
 
 .btn-danger{
+
   background: red;
   border: none;
   font-size: 1.3rem;
-
+}
 
 .btn-success{
+
   background: green;
 }
 
-#btn{
-  margin-top: 20px;
-  margin-bottom: 20px;
+.container{
+  color: #888;
+  background: #f7f7f7;
+  font-family: "OpenSans";
+  font-size: 12pt;
+}
+
+.text-box{
+  font-family: "OpenSans";
+  font-weight: bold;
+  font-size: 14pt;
+  margin-top:20px;
+  margin-bottom: 10px;
 }
 
 .card-content{
@@ -60,21 +126,12 @@ a:hover{
   width: 100%;
 }
 
-#CVV-input{
-  text-align:center;
-  width: 40px;
-}
-
-.container{
-  color: #888;
-  background: #f7f7f7;
-  font-family: "OpenSans";
-  font-size: 12pt;
-}
-
-.custom-input input:focus{
-  border: none;
-  outline: none;
+.inputCurrency{
+  border: 2px solid #ccc;
+  background: #fff;
+  display: table;
+  margin-bottom: 15px;
+  padding: 2px;
 }
 
 .custom-input{
@@ -84,58 +141,6 @@ a:hover{
   font-weight: bold;
   padding: 3px;
   width: 100%;
-}
-
-#currency{
-  display: table-cell;
-}
-
-.dropdown-menu{
-  right: 80%;
-  left: auto;
-}
-
-.fix-position{
-  transform: translateY(15px);
-}
-
-.form-control{
-  border:none ;
-}
-
-.form-control:focus {
-  border: 1px solid #00ff00;
-}
-
-.glyphicon-log-in, .glyphicon-option-horizontal{
-  color: green;
-  font-size: 2rem;
-}
-
-.glyphicon-option-horizontal{
-  transform: translateY(5px);
-}
-
-.glyphicon-option-horizontal:hover{
-  color: limegreen;
-}
-
-.glyphicon-log-in:hover{
-  color: limegreen;
-}
-
-input:focus{
-  border: none;
-  border-bottom: 1px solid #00ff00;
-  outline: none;
-}
-
-.inputCurrency{
-  border: 2px solid #ccc;
-  background: #fff;
-  display: table;
-  margin-bottom: 15px;
-  padding: 2px;
 }
 
 .input-sender-card{
@@ -149,59 +154,36 @@ input:focus{
   border: 1px solid #999;
 }
 
-.input-group-addon  {
-  background: white;
-  border: none;
-}
-
 #inputEmail{
   border: 1px solid #999;
   border-radius: 0px;
+
 }
 
 #inputEmail:focus{
   border: 1px solid #00ff00;
 }
 
-.login-btn:hover{
-  background: none;
+.form-control{
+  border:none ;
 }
 
-#maestro-sender,
-#maestro-recipient{
-  position: relative;
-  top: -22px;
+.form-control:focus {
+  border: 1px solid #00ff00;
 }
 
-#mastercard-sender,
-#mastercard-recipient{
-  position: relative;
-  top: -65px;
-}
-
-#MM-input{
-   text-align:center;
-   width: 50px;
- }
-
-#MMYY-block{
-  margin-top: 18px;
-  font-size: 1.5rem;
-}
-
-.navbar-custom{
-  border: none;
-  background: none;
-}
-
-.navbar-nav{
-  font-size: 1.3rem;
-}
-
-.navbar-btn{
-  background: none;
+.input-group-addon  {
+  background: white;
   border: none;
 }
+
+.brand-card{
+  height: 45px;
+  margin-left: 260px;
+  margin-bottom: 10px;
+
+}
+
 .table-cell{
   display: table-cell;
 }
@@ -210,31 +192,64 @@ input:focus{
   display: table;
 }
 
-.text-box{
-  font-family: "OpenSans";
-  font-weight: bold;
-  font-size: 14pt;
-  margin-top:20px;
-  margin-bottom: 10px;
+
+#currency{
+
+  display: table-cell;
 }
 
-#visa-sender,
-#maestro-sender,
-#mastercard-sender,
-#visa-recipient,
-#maestro-recipient, 
+#visa-sender, #maestro-sender,
+#mastercard-sender,#visa-recipient,
+#maestro-recipient,
 #mastercard-recipient {
+
   position: relative;
   visibility: hidden;
+
+
 }
 
-#visa-sender,
-#visa-recipient{
+#visa-sender, #visa-recipient{
+
   position: relative;
   top: 15px;
+
+}
+
+#maestro-sender,#maestro-recipient{
+  position: relative;
+  top: -22px;
+
+}
+
+
+#mastercard-sender,#mastercard-recipient{
+  position: relative;
+  top: -65px;
+}
+
+#btn{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#MMYY-block{
+
+
+  margin-top: 18px;
+  font-size: 1.5rem;
 }
 
 #YY-input{
   text-align:center;
   width: 50px;
+}
+
+#MM-input{
+  text-align:center;
+  width: 50px;
+}
+#CVV-input{
+  text-align:center;
+  width: 40px;
 }
