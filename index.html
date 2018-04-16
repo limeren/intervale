@@ -1,235 +1,232 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	
-	<title>Task 2</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/main.css">
+  <title>Task 2</title>
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.maskedinput.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.maskedinput.js"></script>
 </head>
-
-	<div class="container">
-     <div class="row">
-				<div class="col-xs-4
-										col-xs-offset-2
-										col-sm-2
-										col-sm-offset-1
-										col-md-2
-										col-lg-1
-										col-lg-offset-2
-										navbar-header">
-						<!--Кнопка Главная и ссылки-->
-					<button type="button" class="btn navbar-btn btn-danger">Главная</button>
-				</div>
-				<div class="hidden-xs
-										hidden-sm
-										visible-md
-										visible-lg
-										col-md-6
-										col-lg-5
-										col-lg-offset-1">
-						<div class="row fix-position">
-							<div class="col-md-6">
-								<a href="#">История переводов</a>
-							</div>
-							<div class="col-md-6">
-								<a href="#">Мои карты</a>
-							</div>
-						</div>
-				</div>
-				<div class="hidden-xs
-										visible-sm
-										hidden-md
-										hidden-lg
-										col-sm-4
-										fix-position">
-							<a href="#">История переводов</a>
-				</div>
-				<!--Содержимое меню-->
-				<div class="col-xs-5
-										col-xs-offset-1
-										col-sm-4
-										col-md-2
-										col-lg-2
-										col-lg-pull-1">
-				<!--Кнопка меню-->
-						<div class="dropdown">
-							<button type="button"
-											class="dropdown-toggle navbar-btn"
-											data-toggle="dropdown"
-											id="dropdownMenu">
-											<span class='glyphicon glyphicon-option-horizontal'></span>
-							</button>
-							<!--Содержимое кнопки меню-->
-							<ul class="dropdown-menu" role="menu"  aria-labelledby="dropdownMenu">
-									<li class="visible-xs hidden-sm  hidden-md hidden-lg">
-											<a href="#">История переводов</a>
-									</li>
-									<li class="visible-sm visible-xs hidden-md hidden-lg">
-											<a href="#">Мои карты</a>
-									</li>
-									<li><a href="#">Настройки</a></li>
-									<li><a href="#">Лимиты и комисии</a></li>
-									<li><a href="#">Помощь</a></li>
-							</ul>
-							<!--Кнопка входа-->
-							<button type="button"
-											class="btn btn-default navbar-btn login-btn">
-								<i class='glyphicon glyphicon-log-in'></i>
-							</button>
-						</div>
-				</div>
-		 </div>
-
-        <!---Карты--->
-		<div class="row">
-
-			<!--Карта отправителя-->
-			<div class="col-xs-12
-									col-md-5
-									col-md-offset-1
-									col-lg-4
-									col-lg-offset-2">
-				<div class="text-box">Данные отправителя</div>
-				<div class="card">
-					<div class="card-content center-block">
-					<div class="brand-card">
-						<div id="visa-sender">
-							<img src="res/visa.svg" height="110%" width="110%">
-						</div>
-						<div id="maestro-sender">
-							<img src="res/maestro.svg" height="110%" width="110%">
-						</div>
-						<div id="mastercard-sender">
-							<img src="res/mastercard.svg" height="110%" width="110%">
-						</div>
-					</div>
-					<div class="input-sender-card">Номер карты<br>
-							<input  onKeyUp="brandingCard();" type="text" id="inputSenderCard">
-					</div>
-					<div id="MMYY-block">
-						<div class="row">
-							<div class="col-xs-6">Срок действия</div>
-							<div class="col-xs-4 col-xs-offset-2">CVV/CVC
-								<span class="glyphicon glyphicon-question-sign"
-											data-toggle="tooltip"
-											data-placement="top"
-											title="CVV-код – это трехзначный
-											код для проверки подлинности Вашей
-											карты.Его можно найти на обратной
-											стороне карты – это 3 цифры рядом
-											с местом для подписи" >
-								</span>
-
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-6">
-								<input type="text"
-											 id="MM-input"
-											 maxlength="2"
-											 placeholder="ММ"> /
-								<input type="text"
-											 id="YY-input"
-											 maxlength="2"
-											 placeholder="ГГ">
-								</div>
-							<div class="col-xs-4 col-xs-offset-2">&nbsp;
-								<input type="text"
-											 maxlength="3"
-											 id="CVV-input">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-			<!--Карта получателя-->
-				<div class="col-xs-12 col-md-5 col-lg-4">
-							<div class="text-box">Данные получателя</div>
-							<div class="card">
-								<div class="card-content center-block">
-									<div class="brand-card">
-									<div id="visa-recipient">
-										<img src="res/visa.svg" height="110%" width="110%">
-									</div>
-									<div id="maestro-recipient">
-										<img src="res/maestro.svg" height="110%" width="110%">
-									</div>
-									<div id="mastercard-recipient">
-										<img src="res/mastercard.svg" height="110%" width="110%">
-									</div>
-								</div>
-								<div class="input-sender-card">Номер карты<br>
-										<input onKeyUp="brandingCard();" id="inputRecipientCard">
-								</div>
-							</div>
-				</div>
-			</div>
-		</div>
-
-	<!--Поля ввода-->
-		<div class="row">
-			<div class="col-md-5
-									col-md-offset-1
-									col-lg-4
-									col-lg-offset-2">
-					<div class="checkbox">
-						    <label>
-			     				<input type="checkbox"> Отправить чек на e-mail
-			    			</label>
-					</div>
-            <div class="form-group">
-                <input type="email" class="form-control" id="inputEmail" placeholder="Ваш e-mail">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4
+    col-xs-offset-2
+    col-sm-2
+    col-sm-offset-1
+    col-md-2
+    col-lg-1
+    col-lg-offset-2
+    navbar-header">
+      <!--Кнопка Главная и ссылки-->
+      <button type="button" class="btn navbar-btn btn-danger">Главная</button>
+    </div>
+    <div class="hidden-xs
+    hidden-sm
+    visible-md
+    visible-lg
+    col-md-6
+    col-lg-5
+    col-lg-offset-1">
+      <div class="row fix-position">
+        <div class="col-md-6">
+          <a href="#">История переводов</a>
+        </div>
+        <div class="col-md-6">
+          <a href="#">Мои карты</a>
+        </div>
+      </div>
+    </div>
+    <div class="hidden-xs
+    visible-sm
+    hidden-md
+    hidden-lg
+    col-sm-4
+    fix-position">
+      <a href="#">История переводов</a>
+    </div>
+    <!--Содержимое меню-->
+    <div class="col-xs-5
+    col-xs-offset-1
+    col-sm-4
+    col-md-2
+    col-lg-2
+    col-lg-pull-1">
+      <!--Кнопка меню-->
+      <div class="dropdown">
+        <button type="button"
+                class="dropdown-toggle navbar-btn"
+                data-toggle="dropdown"
+                id="dropdownMenu">
+          <span class='glyphicon glyphicon-option-horizontal'></span>
+        </button>
+        <!--Содержимое кнопки меню-->
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+          <li class="visible-xs hidden-sm  hidden-md hidden-lg">
+            <a href="#">История переводов</a>
+          </li>
+          <li class="visible-sm visible-xs hidden-md hidden-lg">
+            <a href="#">Мои карты</a>
+          </li>
+          <li><a href="#">Настройки</a></li>
+          <li><a href="#">Лимиты и комисии</a></li>
+          <li><a href="#">Помощь</a></li>
+        </ul>
+        <!--Кнопка входа-->
+        <button type="button"
+                class="btn btn-default navbar-btn login-btn">
+          <i class='glyphicon glyphicon-log-in'></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!---Карты--->
+  <div class="row">
+    <!--Карта отправителя-->
+    <div class="col-xs-12
+    col-md-5
+    col-md-offset-1
+    col-lg-4
+    col-lg-offset-2">
+      <div class="text-box">Данные отправителя</div>
+      <div class="card">
+        <div class="card-content center-block">
+          <div class="brand-card">
+            <div id="visa-sender">
+              <img src="res/visa.svg" height="110%" width="110%">
             </div>
-                <label for="inputSumm">Сумма перевода</label>
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="От 500 до 500000">
-                <span class="input-group-addon">BYN</span>
+            <div id="maestro-sender">
+              <img src="res/maestro.svg" height="110%" width="110%">
+            </div>
+            <div id="mastercard-sender">
+              <img src="res/mastercard.svg" height="110%" width="110%">
+            </div>
+          </div>
+          <div class="input-sender-card">Номер карты<br>
+            <input onKeyUp="brandingCard()" type="text" id="input-sender-card">
+          </div>
+          <div id="MMYY-block">
+            <div class="row">
+              <div class="col-xs-6">Срок действия</div>
+              <div class="col-xs-4 col-xs-offset-2">CVV/CVC
+ <span class="glyphicon glyphicon-question-sign"
+       data-toggle="tooltip"
+       data-placement="top"
+       title="CVV-код – это трехзначный
+							код для проверки подлинности Вашей
+							карты.Его можно найти на обратной
+							стороне карты – это 3 цифры рядом
+							с местом для подписи">
+</span>
               </div>
-            <label for="inputSummary">Итоговая сумма</label>
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="От 680 до 530150">
-              <span class="input-group-addon">BYN</span>
             </div>
-					<div class="checkbox hidden-lg hidden-md">
-						<label>
-			     		<input type="checkbox"> Добавить сообщение получателю
-			    	</label>
-						<span class="glyphicon glyphicon-question-sign"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Добавить сообщение получателю о переводе средств на его счет">
-            </span>
-					</div>
-					<button type="button" id="btn" class="btn btn-primary btn-block btn-success">Перевести</button>
-			</div>
-			<div class="col-md-5">
-					<div class="checkbox hidden-xs hidden-sm">
-						<label>
-			     			<input type="checkbox"> Добавить сообщение получателю 
-						</label>
-						<span class="glyphicon glyphicon-question-sign"
-									data-toggle="tooltip"
-									data-placement="top"
-									title="Добавить сообщение получателю о
-									переводе средств на его счет">
-						</span>
-					</div>
-			</div>
-		</div>
-	</div>
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="text"
+                       id="MM-input"
+                       maxlength="2"
+                       placeholder="ММ"> /
+                <input type="text"
+                       id="YY-input"
+                       maxlength="2"
+                       placeholder="ГГ">
+              </div>
+              <div class="col-xs-4 col-xs-offset-2">&nbsp;
+                <input type="text"
+                       maxlength="3"
+                       id="CVV-input">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Карта получателя-->
+    <div class="col-xs-12 col-md-5 col-lg-4">
+      <div class="text-box">Данные получателя</div>
+      <div class="card">
+        <div class="card-content center-block">
+          <div class="brand-card">
+            <div id="visa-recipient">
+              <img src="res/visa.svg" height="110%" width="110%">
+            </div>
+            <div id="maestro-recipient">
+              <img src="res/maestro.svg" height="110%" width="110%">
+            </div>
+            <div id="mastercard-recipient">
+              <img src="res/mastercard.svg" height="110%" width="110%">
+            </div>
+          </div>
+          <div class="input-sender-card">Номер карты<br>
+            <input onKeyUp="brandingCard()" id="input-recipient-card">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<script src="js/config.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/mask.js"></script>
+  <!--Поля ввода-->
+  <div class="row">
+    <div class="col-md-5
+    col-md-offset-1
+    col-lg-4
+    col-lg-offset-2">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Отправить чек на e-mail
+        </label>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" id="input-email" placeholder="Ваш e-mail">
+      </div>
+      <label>Сумма перевода</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="input-transaction-summ" placeholder="От 500 до 500000">
+        <span class="input-group-addon">BYN</span>
+      </div>
+      <label>Итоговая сумма</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="total-summ" placeholder="От 680 до 530150">
+        <span class="input-group-addon">BYN</span>
+      </div>
+      <div class="checkbox hidden-lg hidden-md">
+        <label>
+          <input type="checkbox"> Добавить сообщение получателю
+        </label>
+<span class="glyphicon glyphicon-question-sign"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="Добавить сообщение получателю о переводе средств на его счет">
+</span>
+      </div>
+      <button type="button"
+              id="btn"
+              class="btn btn-primary btn-block btn-success">Перевести</button>
+    </div>
+    <div class="col-md-5">
+      <div class="checkbox hidden-xs hidden-sm">
+        <label>
+          <input type="checkbox"> Добавить сообщение получателю
+        </label>
+<span class="glyphicon glyphicon-question-sign"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="Добавить сообщение получателю о
+						переводе средств на его счет">
+</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/mask.js"></script>
 
 </body>
 </html>

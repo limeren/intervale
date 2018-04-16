@@ -12,12 +12,7 @@
  
 //---------------------------------------------------------------
 
-
-
-
-
-
-
+ 
 //---------------------------------------------------------------
 //						Settings function
 //---------------------------------------------------------------
@@ -38,7 +33,7 @@ function changeSettings(){
 function brandingCard(){
 
 
-	switch(document.getElementById("inputSenderCard").value[0]){
+	switch(document.getElementById("input-sender-card").value[0]){
 
 	case '4':
 				document.getElementById("visa-sender").style.visibility= 'visible';
@@ -81,7 +76,7 @@ function brandingCard(){
 
 	}
 
-	switch(document.getElementById("inputRecipientCard").value[0]){
+	switch(document.getElementById("input-recipient-card").value[0]){
 
 	case '4':
 				document.getElementById("visa-recipient").style.visibility= 'visible';
@@ -109,40 +104,5 @@ function brandingCard(){
 	}
 
 }
-
-
-function activeInput(m){
-
-
-
-	switch(m){
-
-		case 1: document.getElementById("emailBox").style.borderColor= '#00ff00';
-				break;
-		case 2: document.getElementById("transactionSummBox").style.borderColor= '#00ff00';
-				break;
-		case 3: document.getElementById("totalSummBox").style.borderColor= '#00ff00';
-				break;		
-
-	}
-	
-}
-
-function deActiveInput(m){
-
-	switch(m){
-
-		case 1: document.getElementById("emailBox").style.borderColor= '#ccc';
-				break;
-		case 2: document.getElementById("transactionSummBox").style.borderColor= '#ccc';
-				break;
-		case 3: document.getElementById("totalSummBox").style.borderColor= '#ccc';
-				break;
-
-	}
-	
-}
-
-
-
+ 
  document.addEventListener("DOMContentLoaded", changeSettings());
