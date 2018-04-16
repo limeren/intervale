@@ -12,49 +12,29 @@
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.maskedinput.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 </head>
 
 	<div class="container">
      <div class="row">
-			 <div class="col-xs-5
-										col-sm-5
-										col-md-7
-										col-lg-6
-										col-xs-offset-2
-										col-sm-offset-2
-										col-md-offset-1
-										col-lg-offset-2">
-											<!--Меню-->
-					<nav class="navbar navbar-default navbar-custom" role="navigation">
-							<div class="container-fluid">
-							<!--заголовок меню-->
-									<div class="navbar-header">
-									<!--Кнопка Главная и ссылки-->
-										<button type="button" class="btn navbar-btn btn-danger">Главная</button>
-									</div>
-									<div class="hidden-xs hidden-sm visible-md visible-lg">
-											<ul class="nav navbar-nav">
-													<li><a href="#">История переводов</a></li>
-													<li><a href="#">Мои карты</a></li>
-											</ul>
-									</div>
-									<div class=" hidden-xs visible-sm hidden-md hidden-lg">
-											<ul class="nav navbar-nav">
-													<li><a href="#">История переводов</a></li>
-											</ul>
-									</div>
+				<div class="col-xs-4 col-xs-offset-2 col-sm-2 col-sm-offset-1 col-md-2 col-lg-1 col-lg-offset-1 navbar-header">
+						<!--Кнопка Главная и ссылки-->
+					<button type="button" class="btn navbar-btn btn-danger">Главная</button>
+				</div>
+				<div class="hidden-xs hidden-sm visible-md visible-lg col-md-6 col-lg-7">
+						<div class="row nav navbar-nav">
+							<div class="col-md-6 col-lg-6">
+								<a href="#">История переводов</a>
 							</div>
-					</nav>
-			 </div>
+							<div class="col-md-6 col-lg-6">
+								<a href="#">Мои карты</a>
+							</div>
+						</div>
+				</div>
+				<div class="hidden-xs visible-sm hidden-md hidden-lg col-sm-4 nav navbar-nav">
+							<a href="#">История переводов</a>
+				</div>
 				<!--Содержимое меню-->
-				<div class="col-xs-4
-										col-sm-3
-										col-md-3
-										col-lg-2
-										col-xs-offset-1
-										col-sm-offset-1
-										col-md-offset-1 ">
+				<div class="col-xs-5 col-xs-offset-1 col-sm-4 col-md-2 col-lg-2">
 				<!--Кнопка меню-->
 						<div class="dropdown">
 							<button type="button"
@@ -83,7 +63,6 @@
 						</div>
 				</div>
 		 </div>
-
         <!---Карты--->
 		<div class="row">
 			<div class="col-xs-12 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
