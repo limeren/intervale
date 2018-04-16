@@ -6,6 +6,10 @@ input::-webkit-inner-spin-button {
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
+@font-face {
+	font-family: "OpenSans";
+	src: url("../fonts/OpenSans-Regular.ttf");
+}
 
 a{
 	color: green;
@@ -14,6 +18,7 @@ a{
 
 a:hover{
 	color:limegreen;
+	text-decoration: none;
 }
 
 
@@ -38,6 +43,10 @@ input:focus{
 .navbar-custom{
 	border: none;
 	background: none;
+}
+
+.fix-position{
+	transform: translateY(15px);
 }
 
 .navbar-nav{
@@ -82,11 +91,10 @@ input:focus{
 	font-size: 1.3rem;
 }
 
-@font-face {
-	font-family: "OpenSans";
-	src: url("../fonts/OpenSans-Regular.ttf");
-}
+.btn-success{
 
+	background: green;
+}
 
 .container{
 	color: #888;
@@ -95,7 +103,6 @@ input:focus{
 	font-size: 12pt;
 }
 
-
 .text-box{
 	font-family: "OpenSans";
 	font-weight: bold;
@@ -103,7 +110,6 @@ input:focus{
 	margin-top:20px;
 	margin-bottom: 10px;
 }
-
 
 .card-content{
 	border-radius: 15px;
@@ -115,7 +121,6 @@ input:focus{
 	width: 360px;
 }
 
-
 .card input{
 	border: none;
 	border-bottom: 1px solid #000;
@@ -123,7 +128,6 @@ input:focus{
 	font-weight: bold;
 	width: 100%;
 }
-
 
 .inputCurrency{
 	border: 2px solid #ccc;
@@ -176,7 +180,6 @@ input:focus{
 	background: white;
 	border: none;
 }
-
 
 
 .brand-card{
@@ -240,4 +243,18 @@ input:focus{
 	display: table;
 	margin-top: 10px;
 	font-size: 1.5rem;
+}
+
+#YY-input{
+	text-align:center;
+	width: 50px;
+}
+
+#MM-input{
+	text-align:center;
+	width: 50px;
+}
+#CVV-input{
+	text-align:center;
+	width: 40px;
 }
