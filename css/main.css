@@ -21,7 +21,6 @@ a:hover{
 	text-decoration: none;
 }
 
-
 .dropdown-menu{
 	right: 80%;
 	left: auto;
@@ -38,7 +37,6 @@ input:focus{
 	border-bottom: 1px solid #00ff00;
 	outline: none;
 }
-
 
 .navbar-custom{
 	border: none;
@@ -76,7 +74,6 @@ input:focus{
 .glyphicon-log-in:hover{
 	color: limegreen;
 }
-
 
 .navbar-btn{
 
@@ -153,7 +150,6 @@ input:focus{
 	position: relative;
 }
 
-
 .input-group {
 	border: 1px solid #999;
 }
@@ -180,7 +176,6 @@ input:focus{
 	background: white;
 	border: none;
 }
-
 
 .brand-card{
 	height: 45px;
